@@ -14,7 +14,7 @@ npx tsc --init
 ## Versão da criação do projeto
 - Node: v16.20.2
 - NPM: 8.19.4
-- 
+
 ## Versão do curso
 - Node: v18.16.0
 
