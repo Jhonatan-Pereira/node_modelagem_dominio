@@ -9,6 +9,10 @@ npm i -D typescript ts-node-dev tsconfig-paths jest ts-jest
 npm i -D @types/jest @types/node
 
 npx tsc --init
+
+npm i uuid
+
+npm i -D @types/uuid
 ```
 
 ## Versão da criação do projeto
