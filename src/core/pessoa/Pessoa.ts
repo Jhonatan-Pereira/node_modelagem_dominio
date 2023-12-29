@@ -16,9 +16,14 @@ export default class Pessoa {
     readonly cpf: Cpf
     
     constructor(props: PessoaProps) {
-        this.props = props
+        this.id = new Id(props.id)
         this.nome = new NomePessoa(props.nome)
         this.cpf = new Cpf(props.cpf)
-        this.id = new Id(props.id)
+
+        this.props = { ...props, id: this.id.valor }
+    }
+
+    clone(newProps: PessoaProps) {
+        return new Pessoa({...this.props, ...newProps})
     }
 }
