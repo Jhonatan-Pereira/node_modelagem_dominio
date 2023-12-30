@@ -21,13 +21,12 @@ export default abstract class Entidade<Tipo, Props extends EntidadeProps> {
         return this.id.diferente(outraEntidade?.id)
     }
 
-    clone(newProps: Props, ...args: any): Tipo {
+    clone(newProps: Props): Tipo {
         return new (this.constructor as any)(
             {
                 ...this.props, 
                 ...newProps
-            },
-            ...args
+            }
         )
     }
 }
