@@ -13,6 +13,10 @@ npx tsc --init
 npm i uuid
 
 npm i -D @types/uuid
+
+npm i -D @faker-js/faker
+
+npm i -D gerador-validador-cpf
 ```
 
 ## Versão da criação do projeto
