@@ -26,7 +26,7 @@ export default class RegiaoCpf {
     static readonly MG = RegiaoCpf.TODAS[6]
     static readonly ES_RJ = RegiaoCpf.TODAS[7]
     static readonly SP = RegiaoCpf.TODAS[8]
-    static readonly RR_SC = RegiaoCpf.TODAS[9]
+    static readonly PR_SC = RegiaoCpf.TODAS[9]
 
     static porCodigo(codigo: number): RegiaoCpf {
         return RegiaoCpf.TODAS[codigo]

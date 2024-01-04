@@ -1,4 +1,5 @@
 import Erros from "../constants/Erros"
+import RegiaoCpf from "./RegiaoCpf"
 
 export default class Cpf {
     readonly valor: string
@@ -6,6 +7,10 @@ export default class Cpf {
     constructor(valor?: string) {
         this.valor = valor?.replace(/\D/g, '') ?? ''
         if(!Cpf.isValido(this.valor)) throw new Error(Erros.CPF_INVALIDO)
+    }
+
+    get regiao(): RegiaoCpf {
+        return RegiaoCpf.porCpf(this.valor)
     }
 
     get formatado() {

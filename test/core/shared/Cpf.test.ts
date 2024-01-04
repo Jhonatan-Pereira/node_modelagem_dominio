@@ -1,5 +1,6 @@
 import Erros from "@/core/constants/Erros"
 import Cpf from "@/core/shared/Cpf"
+import RegiaoCpf from "@/core/shared/RegiaoCpf"
 
 test('Deve retornar cpf inválido (false) para string vazia', () => {
     expect(Cpf.isValido('')).toBeFalsy()
@@ -62,4 +63,11 @@ test('Deve retornar o valor do cpf', () => {
     expect(new Cpf('34688565046').valor).toBe('34688565046')
     expect(new Cpf('028.777.810-03').valor).toBe('02877781003')
     expect(new Cpf('088.535.530-06').valor).toBe('08853553006')
+})
+
+test('Deve retornar a regiao do cpf', () => {
+    expect(new Cpf('28001238938').regiao).toBe(RegiaoCpf.PR_SC)
+    expect(new Cpf('187.991.372-08').regiao.codigo).toBe(2)
+    expect(new Cpf('028.777.810-03').regiao.estados[0]).toBe('RS')
+    expect(new Cpf('088.535.530-06').regiao).toBe(RegiaoCpf.RS)
 })
